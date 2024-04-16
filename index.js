@@ -6,15 +6,14 @@
 // Input a dog's age in human years: 15                                    
 // The dog's age in dog's years is 73
 
-    let humanYears = 1;
-    let firstDogYear = humanYears * 10.5;
-    let secondDogYear = firstDogYear * 2;
-    let subDogYears = humanYears * 4;
- 
-
 const readline = require("readline-sync");
 let dogYrInput = parseInt(readline.question(`How old is your dog in human years?: `))
 
-let humanDogAge = subDogYears + secondDogYear
+    let humanYears = 2;
+    let firstDogYear = humanYears * 10.5;
+    let laterDogYears = dogYrInput - humanYears
+    let subDogYears = firstDogYear + laterDogYears  * 4;
+ 
 
-console.log(`Your dog is ${dogYrInput} in human years. In dog years, your dog is ${humanDogAge}`)
+
+console.log(`Your dog is ${dogYrInput} in human years. In dog years, your dog is ${subDogYears}`)
